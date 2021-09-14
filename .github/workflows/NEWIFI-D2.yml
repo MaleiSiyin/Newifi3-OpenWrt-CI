@@ -48,6 +48,7 @@ jobs:
           mkdir openwrt-packages
           cd openwrt-packages
           git clone https://github.com/LemoFire/luci-app-aliddns.git
+          git clone https://github.com/xiaoqi2020/openwrt-package.git
       - name: Update feeds
         run: |
           ./scripts/feeds update -a
@@ -84,8 +85,11 @@ jobs:
           
           # APP
           CONFIG_PACKAGE_luci-app-aliddns=y
-          CONFIG_PACKAGE_luci-app-aria2=y
-          CONFIG_PACKAGE_luci-app-frpc=y
+          CONFIG_PACKAGE_luci-app-ddnsto=y
+          CONFIG_PACKAGE_luci-app-oscam=y
+          CONFIG_PACKAGE_luci-app-socat=y
+          # CONFIG_PACKAGE_luci-app-aria2=y
+          # CONFIG_PACKAGE_luci-app-frpc=y
           CONFIG_PACKAGE_luci-app-frps=y
           CONFIG_PACKAGE_luci-app-hd-idle=y
           # CONFIG_PACKAGE_luci-app-mwan3=y
